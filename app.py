@@ -13,8 +13,12 @@ def main():
     if choice == "1":
         user_id = int(input("Enter User ID: "))
         issue = input("Describe the issue: ")
-        create_service_request(user_id, issue)
+
+        category, priority = create_service_request(user_id, issue)
+
         print("Service request created successfully.")
+        print(f"AI Detected Category: {category}")
+        print(f"AI Predicted Priority: {priority}")
 
     elif choice == "2":
         request_id = int(input("Enter Request ID: "))

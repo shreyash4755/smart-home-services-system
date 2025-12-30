@@ -19,3 +19,6 @@ CREATE TABLE service_requests (
     FOREIGN KEY(user_id) REFERENCES users(user_id),
     FOREIGN KEY(assigned_tech) REFERENCES technicians(tech_id)
 );
+
+ALTER TABLE service_requests ADD COLUMN category TEXT;
+ALTER TABLE service_requests ADD COLUMN priority TEXT;
